@@ -8,7 +8,8 @@ public class StartButton : MonoBehaviour
     public Animator animator;
     private void OnTriggerEnter(Collider other)
     {
-        if(!hoopGame.gameON && other.CompareTag("Player"))
+        Debug.Log("tigger enter: " + other.name);
+        if (!hoopGame.gameON && other.name == "finger_middle_2_r" || !hoopGame.gameON && other.name == "finger_middle_1_r") ;
         {
             hoopGame.StartGame();
             animator.Play("StartButton");
